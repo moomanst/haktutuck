@@ -1,0 +1,58 @@
+A modern hackers txt file
+
+!!Disclaimer!!
+    I take no responsibility for what you do with this info.
+    Use it responsibly
+
+01 The basics
+02 nmap
+03 Pulse
+  03.1 PassGen
+04 SnapCrack
+05 Retardedly simple mymaths hw hack
+06 ~ More to come ~
+
+    The basics
+  So the basics are that you need to have a basic knoledge of linux and how it works. This is prety easy so just go and experiment xD. The distro I would recomend is
+  kali linux due to its pre-intergrated apps and scripts. If you know the basics and prefer another distro go ahead but in most of these articles kali will be the
+  described distro.
+  
+    nmap
+  nmap is an extensive port mapping tool, we use it to look for open ports that will accept attack vectors. To start you will need your targets IP [v4] adress on the
+  local network. nmap [ <Scan Type> ...] [ <Options> ] { <target specification> } is the basic synopsis of how we put and nmap scan command together. An example of a
+  real-world example of an nmap command would be: nmap -A -T4 scanme.nmap.org; -A enables os detection, -T4 sets the timing template [higher is faster],
+  scanme.nmap.org is the web adress that is being targeted [this can also be an IP adress]. Due to the way modern cyber security works some of these scans will be
+  rejected, to evade this this we use args like -D which sends out decoys or -mtu which fragments the packets.
+  
+    Pulse
+  Pulse is one of the brilliant tools developed by the pentester Ethical-H4CK3R who writes scripts for hacking different sites. This is a tool for hacking accounts
+  on the sites: Instagram, Facebook & Twitter. This is a very vesitale script so ues it wisely. Now how do you use it? First you need to download it from the github
+  repo [https://elbo.in/NfR]. Next the usage of this script is as follows: python pulse.py [site] [username] [wordlist]. [site]; this needs to be the site you want to 
+  bruteforce, so either insta, fb, or twtr. [username]; for this field you need to input the username of the acc you are trying to break into. [wordlist]; a wordlist
+  is a file of all the passwords you want the script to try against the username, if you dont have one or feel that you should make one yourself try a script called 
+  PassGen. 
+        PassGen
+          PassGen can be downloaded from Ethical-H4CK3R's github [https://elbo.in/FFNC] to use it you just need to run the script and input some basic deets about the 
+          'victim'.
+  Once you have all of these parameters fill out the command [remember dont include the square brackets] it should look something like this python pulse.py 
+  Instagram username103 pass.lst. Depending on the ammount of passwords you have this will take more time the more passwords you input, this means you can leave it
+  overnight in most times.
+
+    Snapcrack
+  Now this is a funky one, snapcrack is a snapchat bruteforcer [as the name implies]. To get going first you need to edit the users.txt to have the usernames of the 
+  users that you want to attack. Next you need to do the same to the list of passwords under passwords.txt . Now you are done, leave it overnight and have fun 
+  cracking.
+
+    MyMaths Hack
+  This one is a little gritty. First sign in and open up a homework [bare in mind this dosnt work for every homework on the site] then once the site is loaded press
+  ctrl+shift+i to open the dev panel now change to the network tab, now tab back to the hw and click markit on both of the pages. You should see a file come up in the
+  network pane under the name of SaveDataOH2 or similar. Right click on this request and copy as cURL, next paste your clipboard into a notes app or the like. Now you
+  need to grab a few things from the pasted request. copy out the url in the first set of inverted commas and  paste it out below add a ? to the end of the url to
+  make it look something like this, https://app.mymaths.co.uk/studentRecords/saveDataOH2.asp?. Then after that you need to add everything in the last set of inverted
+  commas [before the --compressed tag] to then make the url look like this, 
+  https://app.mymaths.co.uk/studentRecords/saveDataOH2.asp?sCode=4979893728969&q1score=0&q2score=0&taskID=1187, then edit the q1 and q2 scores to whatever mark you 
+  you want [only to the limit of the question], to make it look like this 
+  https://app.mymaths.co.uk/studentRecords/saveDataOH2.asp?sCode=4979893728969&q1score=16&q2score=24&taskID=1187. Next paste that url into your web browser 
+  aaaaaannnd done!!
+  
+Keep an eye on this github repo for updates to this text file.
